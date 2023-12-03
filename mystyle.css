@@ -1,5 +1,9 @@
+*{
+    box-sizing: border-box;
+}
 .header{
 display: inline-flex;
+width: 83rem;
 height: 2.375rem;
 padding: 0.5625rem 6.25rem 0.5625rem 34rem;
 justify-content: flex-end;
@@ -9,6 +13,9 @@ flex-shrink: 0;
 background: #000;
 }
 .head{
+    
+width: 20.9375rem;
+height: 1.1875rem;
 color: #FFF;
 font-family: Satoshi;
 font-size: 0.875rem;
@@ -17,38 +24,91 @@ font-weight: 400;
 line-height: normal;
 }
 .signup{
-    color: #FFF;
-font-family: Satoshi;
-font-size: 0.875rem;
-font-style: normal;
 font-weight: 500;
-line-height: normal;
 text-decoration-line: underline;
 }
+@media only screen and (max-width:400px){
+   .header{
+    width: 50rem;
+    
+   }
+   .head{
+    display: none;
+    font-size: 0.75rem;
+   }
+    }
 .navbar{
     display: flex;
-    width: 77.5rem;
+    width: 82.5rem;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
+    
 }
+
+/* .menu-icon{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+} */
 .navbar .h2{
     color: #000;
-
-/* leading-trim: both; */
-
-/* text-edge: cap; */
-font-family: Integral CF;
-font-size: 2rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-family: Integral CF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 .navbar ul {
     display: flex;
     list-style-type: none;
     align-items: center;
     gap: 1.5rem;
+}
+.navbar .shopmenu{
+    position: relative;
+}
+.dropdowncontent{
+    position: absolute;
+    margin-top: 0rem;
+    z-index: 1;
+    display: none;
+    background-color:#FFF;
+    width: 3rem;
+    height: 2rem;
+    border: 2rem black;
+    line-height: 1rem;
+    border-radius: 5px;
+  }
+  .dropdowncontent a{
+    display: block;
+    padding: 15px 15px;
+ }
+ .shopmenu:hover .dropdowncontent{
+    display: block;
+  }
+  .tshirtdropdown{
+    position: absolute;
+    margin-top: 0rem;
+    z-index: 1;
+    display: none;
+    background-color:#FFF;
+    width: 5rem;
+    height: 2rem;
+    border: 2rem black;
+    line-height: 1rem;
+    border-radius: 5px;
+  }
+  .tshirtdropdown a{
+    display: block;
+    padding: 15px 5px;
+  }
+  .dropdowncontent:hover .tshirtdropdown{
+    display: block;
+  }
+.navbar ul li a{
+    text-decoration: none;
+    color: #000;
 }
 .navbar ul .search{
     display: flex;
@@ -69,11 +129,49 @@ line-height: normal;
     line-height: normal;
     background: #F0F0F0;
 }
+@media only screen and (max-width:400px){
+    /* .menu-icon{
+        display: block;
+    } */
+    
+     .navbar{
+        display: none;
+        position: absolute;
+        width: 50rem;
+        top: 50px;
+        /* background-color: #333; */
+        text-align: center;
+     }
+    .navbar{
+        display: block;
+    }
+    .navbar ul{
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .navbar ul li a{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .navbar h2{
+        font-size: 3rem;
+    }
+    }
+    
+    
 .container{
     background: url(/Images/Rectangle\ 2.png);
     width: 83rem;
     height: 41.4375rem;
     flex-shrink: 0;
+}
+@media only screen and (max-width:400px){
+    .container{
+        background: url(/Images/Rectangle\ 2.png);
+        width: 50rem;
+        height: 50rem;
+        margin-top: 31rem;
+    }
 }
 .container h1{
     width: 36.0625rem;
@@ -130,6 +228,12 @@ text-decoration: none;
     height: 4.625rem;
     gap: 2rem;
 }
+@media only screen and (max-width:420px){
+    .details{
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
 .line{
     width: 1.0625rem;
 height: 4.625rem;
@@ -148,7 +252,14 @@ flex-shrink: 0;
 background: #000;
 gap: 2rem;
 }
-
+@media only screen and (max-width:420px){
+    .brands{
+        width: 50rem;
+        height: 40rem;
+        flex-direction: column;
+        margin-top: 12rem;
+    }
+}
 .new{
 color: #000;
 /* text-align: center; */
@@ -169,6 +280,13 @@ justify-content: center;
     width: 83rem;
     height: 27.75rem;
     flex-shrink: 0;
+}
+@media only screen and (max-width:420px){
+    .arrivals{
+        flex-direction: column;
+        width: 50rem;
+        align-items: center;
+    }
 }
 .tshirt{
     border-radius: 10px;
@@ -241,6 +359,8 @@ line-height: normal;
     display: flex;
 width: 13.625rem;
 height: 3.25rem;
+background-color: #000;
+
 margin-left: 30.19rem;
 padding: 1rem 3.375rem;
 justify-content: center;
@@ -250,8 +370,15 @@ flex-shrink: 0;
 border-radius: 3.875rem;
 border: 1px solid rgba(0, 0, 0, 0.10);
 }
+@media only screen and (max-width:420px){
+    .view{
+        margin-top: 65rem;
+        flex-direction: column;
+        margin-left: 18rem;
+    }
+}
 .viewall{
-    color: #000;
+    color:#F0F0F0;
 font-family: Satoshi;
 font-size: 1rem;
 font-style: normal;
@@ -284,6 +411,12 @@ line-height: normal;
     height: 27.75rem;
     flex-shrink: 0;
 }
+@media only screen and (max-width:420px){
+    .topselling{
+        flex-direction: column;
+        width: 50rem;
+    }
+}
 .browse{
     display: block;
     width: 77.4375rem;
@@ -294,6 +427,14 @@ border-radius: 2.5rem;
 background: #F0F0F0;
 
 }
+@media only screen and (max-width:420px){
+    .browse{
+        width: 49rem;
+        margin-left: 0rem;
+        height: 92rem;
+    }
+    
+}
 .dress{
     color: #000;
 text-align: center;
@@ -303,6 +444,22 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 margin-top: 4.38rem;
+}
+@media only screen and (max-width:400px){
+    .images{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .img{
+        margin-left: 0.5rem;
+        width: 36rem;
+        height: 18rem;
+    }
+    .img1{
+        margin-left: 6rem;
+        width: 34rem;
+    }
+    
 }
 .images{
     display: flex;
@@ -349,6 +506,21 @@ line-height: normal;
 .images1{
     display: flex;
     gap: 2rem;
+}
+@media only screen and (max-width:420px){
+    .images1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .partyimage{
+        width: 37rem;
+        height: 18rem;
+    }
+    .gymimage{
+        width: 37rem;
+        height: 18rem;
+        margin-left: 6rem;
+    }
 }
 .party{
     position: relative;
@@ -415,24 +587,296 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
-.customer1{
+.cust{
     display: flex;
-width: 25rem;
-height: 15rem;
-padding: 1.75rem 2rem;
-align-items: flex-start;
-align-content: flex-start;
-gap: 1.5rem 21.375rem;
-flex-shrink: 0;
-flex-wrap: wrap;
-border-radius: 1.25rem;
-border: 1px solid rgba(0, 0, 0, 0.10);
-filter: blur(2px);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content:center;
+    gap: 1rem;
 }
-.layout{
+@media only screen and (max-width:400px)
+{
+    .cust{
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 11rem;
+    }
+   .customer{
+    margin-left: 5rem;
+   }
+}
+
+
+.cust1 .Sarah{
+    margin-left: 2rem;
+    color: #000;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px;
+}
+.cust2 .alex{
+    margin-left: 2rem;
+    color: #000;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.375rem; 
+}
+.cust3 .james{
+    margin-left: 2rem;
+color: #000;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.375rem; 
+}
+.darksection{
+    position: relative;
+    z-index: 1;
     display: flex;
-flex-direction: row;
+width: 77.4rem;
+height: 12rem;
+margin-left: 3rem;
+/* height: 11.25rem; */
+padding: 2.25rem 4rem;
+justify-content:space-between;
+
 align-items: flex-start;
-gap: 0.9375rem;
-flex: 1 0 0;
+border-radius: 1.25rem;
+background: #000;
+position: relative;
+}
+.darksection .text{
+    width: 37rem;
+height: 5.875rem;
+flex-shrink: 0;
+}
+.text .stay{
+    margin-top: 1rem;
+    color: #FFF;
+font-family: Integral CF;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2.8125rem; 
+}
+
+.darksection .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 3rem;
+    width: 34.4375rem;
+    height: 5.875rem;
+    flex-shrink: 0;
+    /* background-color: white; */
+}
+
+.input1 {
+    display: flex;
+width: 21.8125rem;
+height: 3rem;
+padding: 0.75rem 1rem;
+align-items: flex-start;
+gap: 0.75rem;
+  border-radius: 3.875rem;
+  background: #FFF;
+}
+.input1 .email{
+    height: 1.5rem;
+    border: none;
+}
+.newsletter{
+    display: flex;
+width: 21.8125rem;
+height: 3rem;
+/* padding: 0.75rem 1rem; */
+align-items: flex-start;
+gap: 0.75rem;
+  border-radius: 3.875rem;
+  background: #FFF;
+}
+.newsletter .subscribe{
+    color: #000;
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+@media only screen and (max-width:400px)
+{
+    .darksection{
+        flex-direction: column;
+        width: 43rem;
+        height: 18rem;
+        margin-left: 0.5rem;
+    }
+    .stay{
+        margin-left: 0.5rem;
+    }
+    .inputs{
+        margin-top: 2rem;
+        /* margin-left: 4rem; */
+    }
+    .input1{
+        margin-left: 4rem;
+    }
+    .newsletter{
+        margin-left: 4rem;
+    }
+}
+.footer{
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    gap: 4rem;
+    position: absolute;
+    z-index: 2;
+    width: 83rem;
+height: 17.1875rem;
+flex-shrink: 0;
+background: #F0F0F0;
+}
+@media only screen and (max-width:400px)
+{
+    .footer{
+        width: 50rem;
+        height: 80rem;
+        margin-top:0rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .companyinfo {
+        margin-left: 6rem;
+    }
+    .cmp{
+        margin-left: 6rem;
+    }
+    .help, .faq, .resources{
+        margin-left: 6rem;
+    }
+}
+.companyinfo{
+display: flex;
+flex-direction: row;
+/* width: 15.5rem; */
+justify-content: space-between;
+align-items: flex-start;
+}
+.companyinfo .shopdark{
+    width: 15.5rem;
+}
+.shopdark .shoptext{
+    color: #000;
+/* leading-trim: both;
+text-edge: cap; */
+font-family: Integral CF;
+font-size: 2.09094rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.shopdark .shopinfo{
+    color: rgba(0, 0, 0, 0.60);
+font-family: Satoshi;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.375rem; /* 157.143% */
+width: 15.5rem;
+}
+.companyinfo .cmp{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.625rem;
+}
+.cmprow .companytext{
+    color: #000;
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.125rem; /* 112.5% */
+letter-spacing: 0.1875rem;
+text-transform: uppercase;
+margin-top: 3rem;
+}
+.cmp{
+    width: 10rem;
+}
+.cmprow a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.60);
+
+}
+.cmprow .about{
+    color: rgba(0, 0, 0, 0.60);
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.1875rem; /* 118.75% */
+}
+.help{
+    width: 10rem;
+}
+.help .helptextpara{
+    color: #000;
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.125rem; /* 112.5% */
+letter-spacing: 0.1875rem;
+text-transform: uppercase;
+margin-top: 3rem;
+}
+.helptext .about a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.60);
+
+}
+.faq{
+    width: 10rem;
+}
+.faq .faqtextpara{
+    color: #000;
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.125rem; /* 112.5% */
+letter-spacing: 0.1875rem;
+text-transform: uppercase;
+margin-top: 3rem;
+}
+.faqtext .about a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.60);
+
+}
+.resources{
+    width: 10rem;
+}
+.resources .restextpara{
+    color: #000;
+font-family: Satoshi;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.125rem; /* 112.5% */
+letter-spacing: 0.1875rem;
+text-transform: uppercase;
+margin-top: 3rem;
+}
+.restext .about a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.60);
+
 }
